@@ -5,10 +5,10 @@
 const https = require('https')
 
 const data = JSON.stringify({
-    todo: '做点事情'
+    todo:'做点事情'
 })
 
-const options = {
+const options={
     hostname: 'nodejs.cn',
     port: 443,
     path: '/todos',
@@ -33,5 +33,3 @@ req.on('error', error => {
 
 req.write(data)
 req.end()
-
-// PUT 和 DELETE 请求使用相同的 POST 请求格式，只需更改 options.method 的值即可
